@@ -6,4 +6,52 @@
 header {
     display: flex;
     justify-content: space-between;
+
+    height: 7.5rem;
+
+    border-bottom: 5px solid black;
+    box-shadow: 5px 5px 5px grey;
+}
+
+header > section, 
+header > nav {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section.sitelogoandtitle {
+    background-color: paleturquoise;
+    
+}
+
+section.sitelogoandtitle > img {
+    height: 100%;
+}
+
+
+nav {
+    /* justify-content: space-evenly !important; */
+    /* width: 50%; */
+
+    gap: 50px;
+}
+
+section.headersearchbar {
+    margin-right: 5%;
+}
+
+nav > a {
+    background-color: palegreen;
+    font-size: larger;
+    padding: 5px;
+    
+    width: 5dvw;
+    text-align: center;
+}
+
+nav > a:hover {
+    background-color: palevioletred;
 }
