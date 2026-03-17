@@ -10,6 +10,7 @@ Repo for flexbox intro class of PGM1001 T1 2026.
         - Dummy search bar
     - Main content
         - Hero image
+        - Call to Action 
         - Text in cards section, e.g. testimonials/reviews/latest posts/etc etc
     - Footer
         - Columns of related links in the footer 
