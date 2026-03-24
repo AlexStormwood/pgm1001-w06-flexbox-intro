@@ -52,7 +52,8 @@ nav > a {
     text-align: center;
 }
 
-nav > a:hover {
+nav > a:hover,
+#nav-active:hover {
     background-color: palevioletred;
 }
 
@@ -126,3 +127,12 @@ section#testimonials {
     padding: 1%;
     border-radius: 1rem;
 }
+
+
+#nav-active {
+    background-color: palegoldenrod;
+}
+
+/* #nav-active:hover {
+    background-color: rgb(161, 160, 141);
+} */
