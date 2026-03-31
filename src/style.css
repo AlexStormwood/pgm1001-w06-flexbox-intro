@@ -1,3 +1,4 @@
+/* Mobile-first CSS overhaul! */
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +12,13 @@ header {
 
     border-bottom: 5px solid black;
     box-shadow: 5px 5px 5px grey;
+
+    flex-wrap: wrap;
 }
 
 header > section, 
 header > nav {
-    height: 100%;
+    height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,7 +27,10 @@ header > nav {
 
 section.sitelogoandtitle {
     background-color: paleturquoise;
-    
+
+    /* img {
+        display: none;
+    } */
 }
 
 section.sitelogoandtitle > img {
@@ -40,6 +46,10 @@ nav {
 }
 
 section.headersearchbar {
+    /* If we don't want to show the search bar on mobile: */
+    /* display: none; */
+    width: 100dvw;
+
     margin-right: 5%;
 }
 
@@ -60,14 +70,20 @@ nav > a:hover,
 
 section#heroimage {
     width: 100%;
-    height: 70dvh;
+    /* height: 70dvh; */
+    height: 50dvh;
     background-color: black;
 
     text-align: center;
 
+    /* Alt image resizing solution: */
+    overflow: hidden;
+
     img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        /* transform: scale(2); */
         /* opacity: 0.5; */
     }
 
@@ -106,7 +122,7 @@ section#calltoaction {
 
 section#testimonials {
     width: 100%;
-    height: 33dvh;
+    /* height: 33dvh; */
     background-color: rgb(237, 100, 216);
     justify-content: center;
     display: flex;
@@ -117,15 +133,17 @@ section#testimonials {
 #testimonialContainer {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    font-size: large;
     gap: 5%;
 }
 
 .testimonial {
     background-color: cornflowerblue;
     padding: 1%;
-    border-radius: 1rem;
+    margin: 2%;
+    border-radius: 0.5rem;
 }
 
 
@@ -136,3 +154,37 @@ section#testimonials {
 /* #nav-active:hover {
     background-color: rgb(161, 160, 141);
 } */
+
+/* Landscape phones and portrait tablets */
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Desktop/laptop/etc - large screens */
+@media screen and (min-width: 1200px) {
+    header > section, 
+    header > nav {
+        height: 100%;
+    }
+
+    section.headersearchbar {
+        /* If we don't want to show the search bar on mobile: */
+        /* display: none; */
+        width: auto;
+    }
+
+    #testimonialContainer {
+        
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .testimonial {
+        /* flex: 1; */
+        flex-grow: 1;
+        padding: 1%;
+        /* margin: 2%; */
+        border-radius: 1rem;
+        width: 40dvw;
+    }
+}
